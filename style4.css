@@ -1,0 +1,144 @@
+/*共通の設定*/
+#eg {
+  font-size: 15pt;
+  position: relative;
+}
+#eg p{
+  background-color: #ccffff;
+  width: 50%;
+  text-align: right middle;
+  border: 1px solid #000000;
+  border-radius: 10px;
+}
+#eg1 {
+  position: relative;
+  font-size:15pt;
+  background-color: #ccffff;
+  width: 50%;
+  padding: 10pt;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  text-align: right middle;
+}
+#res {
+  position: relative;
+  background-color: #000000;
+  border: 1px solid #000000;
+  color: #ffffff;
+  width: 50%;
+  padding: 10pt;
+  text-align: right middle;
+}
+#sp {
+  background:linear-gradient(transparent 70%, red 50%);
+}
+
+.syn {
+  width: 50%;
+  position: relative;
+  margin: 2em 0;
+  padding: 25px 10px 10px 10px;
+  border: solid 2px #FFC107;
+}
+.syn .box-title {
+    position: absolute;
+    display: inline-block;
+    top: -2px;
+    left: -2px;
+    padding: 0 9px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 17px;
+    background: #ffc107;
+    color: #ffffff;
+    font-weight: bold;
+}
+.syn h3{
+  margin: 0;
+  padding: 0;
+}
+/*目次の編集*/
+#attention {
+  text-decoration: underline;
+  color:red;
+}
+.contents h1{
+  background-color: #f5f5f5;
+  border: 5px inset #ff9999;
+  border-radius: 10px;
+  padding-left: 1px;
+  padding-right: 1px;
+  width: 50%;
+}
+.contents li{
+  font-size: 15pt;
+  font-weight: bolder;
+}
+.s li{
+  font-size: 12pt;
+  font-weight: bold;
+}
+
+/*s0の編集*/
+.section0 h1{
+  background-color: #f5f5f5;
+  border: 5px inset #99ffff;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 1px;
+  width: 50%;
+}
+.section0 p{
+  font-size: 12pt;
+  text-indent: 1em;
+}
+
+/*s1の編集*/
+.section1 h1{
+  background-color: #f5f5f5;
+  border: 5px inset #ffff99;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 1px;
+  width: 50%;
+}
+.section1 p{
+  font-size: 12pt;
+  text-indent: 1em
+}
+
+/*s2の編集*/
+.section2 h1{
+  background-color: #f5f5f5;
+  border: 5px inset #99ff99;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 1px;
+  width: 50%;
+}
+.section2 p{
+  font-size: 12pt;
+}
+.exp
+{
+  font-size: 12pt;
+  text-indent: 1em;
+}
+.S2 h2{
+  background-color: #f5f5f5;
+  border: 5px inset #99ff99;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 1px;
+  width: 50%;
+}
+
+/*s3の編集*/
+.section3 h1{
+  background-color: #f5f5f5;
+  border: 5px inset #99ccff;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 1px;
+  width: 50%;
+}
