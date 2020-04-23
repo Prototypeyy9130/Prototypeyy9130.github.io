@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>クリエイターになろう/Python編</title>
+    <link rel="stylesheet" type="text/css" href="style4.css">
+  </head>
+  <body>
+    <header>
+      <h1 id="attention">※本ページは作成主の練習のためにアップロードしたものです。</h1>
+      <nav>
+        <div class="contents">
+          <h1 id="top">目次</h1>
+          <ol>
+            <li><a href="#s0">Pythonについて -基本情報-</a></li>
+            <li><a href="#s1">First Step</a></li>
+            <li><a href="#s2">Pythonの基本</a>
+              <ol>
+                <li><a href="#s2-1">コードの内容</a></li>
+                <li><a href="#s2-2">文字列と数値</a></li>
+                <li><a href="#s2-3">２進数、８進数、１６進数</a></li>
+                <li><a href="#s2-4">エスケープシークエンス</a></li>
+              </ol>
+            </li>
+            <li><a href="#s3">変数と式</a>
+              <ol>
+                <li><a href="#s3-1">変数</a></li>
+              </ol>
+            </li>
+          </ol>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="section0" id="s0">
+        <h1>Pythonについて -基本情報-</h1>
+        <p>ここからは、言語を変えて<strong>Python</strong>について学んでいく。 <br>
+           以下に、Pythonに関しての基本情報をあげておく。</p>
+        <ul>
+          <li>文字コード/UTF-8</li>
+          <li>言語/日本語</li>
+          <li>実行/Command Pronpt</li>
+        </ul>
+      </div>
+
+      <div class="section1" id="s1">
+        <h1>First step</h1>
+        <p>そもそもPythonは、<span id="sp">入力されたプログラムを１行ずつ機械語に翻訳するプログラム</span>によって実行される。(<strong>インタプリタ/interprinter</strong>と呼ぶ。) <br>
+           このPythonでプログラムを作成・実行する際はコマンド入力ツールとして<strong>Commnad Prompt</strong>を利用する。(以降CPと省略)</p>
+        <p>さて、Command Promptのプログラムを実行する方法は、大別して２つ存在する。 <br></p>
+           <ol>
+             <li id="eg" style="line-height:2em"><strong>インタラクティブモード/interactive mode</strong>:Pythonのプログラムを１行ずつ対話的に入力する。
+               <ol>
+                 <li>CPで「python」と入力する。 <br>
+                   <p>python(Enter)</p>
+                 </li>
+                 <li>CP上に「&gt;&gt;&gt;」と表示される。 <br>
+                   <p>&gt;&gt;&gt;</p>
+                 </li>
+                 <li>&gt;&gt;&gt;の後にプログラムを入力する。 (e.g.「２＋３」と入力し、「５」と出力したいとき)<br>
+                   <p>&gt;&gt;&gt; 2+3(Enter)</p>
+                 </li>
+                 <li>入力したプログラムが表示される。 <br>
+                   <p>5</p>
+                 </li>
+               </ol>
+             </li>
+             <p>インタラクティブモードを終了するときは、<strong>(Ctrl)+(Z)+(Enter)</strong>を押す。</p>
+             <li id="eg" style="line-height:2em"><strong>スクリプトモード/script mode</strong>:プログラムをファイルに入力して作成した後、ファイル上のプログラムを読み込んで実行する。
+               <ol>
+                 <li>エディタでプログラム(コード)を入力する。　(e.g. 「ようこそPythonへ！」と入力したいとき)<br>
+                   <p>print(&quotようこそPythonへ！&quot)</p>
+                 </li>
+                 <li>入力したコードをファイル名をつけて保存する。(拡張子に<strong>.py</strong>をつける。)<br>
+                     今回は「print.py」として、cドライブ内の「Python」内にある「Section1」フォルダに保存。
+                 </li>
+                 <li>CPに戻って、作業フォルダに移動する。 <br>
+                   <p>cd c:&yenPython&yenSection1(Enter)</p>
+                 </li>
+                 <li>以下のように作成したファイル名を指定して実行する。 <br>
+                   <p>python print.py(Enter)</p>
+                 </li>
+               </ol>
+             </li>
+             <p>結果↓</p>
+             <p id="res">ようこそPythonへ！</p>
+           </ol>
+      </div><br>
+
+      <div class="section2" id="s2">
+        <h1>Pythonの基本</h1>
+        <p>ここではPythonで文字や数値の出力方法について学んでいく。</p><br>
+        <ol>
+          <li><section class="S2" id="s2-1">
+               <h2>コードの内容</h2>
+               <section>
+                 <p class="exp">記号や英数字は半角で入力する。また、Pythonでは各行の先頭を揃えて入力する。(行の先頭に空白などを入れない。)</p>
+                 <div class="syn">
+                   <span class="box-title">重要構文</span>
+                   <h3>print(・・・)：画面に出力する。</h3>
+                 </div>
+                 <p id="eg1">#画面に出力する。(※)<br>
+                             print(&quotようこそPythonへ！&quot) <br>
+                             print(&quotPythonを始めましょう！&quot)</p>
+                 <p style="position:relative">(※「#」は出力されない。(<strong>コメント/comment</strong>と呼ぶ。))</p>
+                 <p>結果↓</p>
+                 <p id="res">ようこそPythonへ！<br>
+                              Pythonを始めましょう！</p>
+               </section>
+               <section>
+                 <p class="exp">続けて、Pythonの原則を確認していく。Pythonでは上述の通り、インタプリタが採用されている。 <br>
+                    つまり、<strong>先頭から１文ずつ処理されていくことになる</strong>。</p>
+                 <p id="eg1">#出力順は①→②<br>
+                             ①print(&quotようこそPythonへ！&quot) <br>
+                             ②print(&quotPythonを始めましょう！&quot)</p>
+               </section>
+               <section>
+                 <p class="exp">さらに、１文を１行で入力するのが鉄則だが、どうしても複数行にまたがる際には、文末に<strong>「&yen」</strong>を入力する。</p>
+                 <p id="eg1">#「ようこそPythonへ！/Pythonを始めましょう！」を一文で表記するとき <br>
+                             print(&quotようこそPythonへ！&yen <br>
+                             Pythonを始めましょう！&quot)</p>
+                 <p>結果↓</p>
+                 <p id="res">ようこそPythonへ！Pythonを始めましょう！</p>
+               </section>
+              </section>
+          </li><br>
+          <li><section class="S2" id="s2-2">
+               <h2>文字列と数値</h2>
+               <section>
+                 <p class="exp">次に、上に出てきたような文字列や数値について学ぶ。
+                    文字の並びを<strong>文字列リテラル/string literal</strong>と呼び、<strong>「''」または「&quot&quot」</strong>ではさむ。 <br>
+                    また、３つの「''」、「&quot&quot」ではさむことで改行を含めた文字列を作ることができる。 <br></p>
+                 <p id="eg1">print(&quot&quot&quotようこそ <br>
+                             Pythonへ!&quot&quot&quot)</p>
+                 <p>結果↓</p>
+                 <p id="res">ようこそ <br>
+                             Pythonへ!</p>
+               </section>
+               <section>
+                 <p>数値を表記することもできる。数値には以下のような種類がある。</p>
+                 <ul>
+                   <li><strong>整数リテラル/integer literal</strong>：1、3、100など</li>
+                   <li><strong>浮動小数点リテラル/floating literal</strong>：2.1、3.14、5.0など</li>
+                   <li><strong>虚数リテラル/imaginary literal</strong>：数値の末尾に「j(<span id="sp">iではない</span>)」をつけたもの</li>
+                 </ul>
+                 <p>なお、数値のリテラルには「''」や「&quot&quot」がつかないので注意する。</p>
+                 <p id="eg1">print(1)<br>
+                             print(3.14)<br>
+                             print(6j) (←6iの意)</p>
+                 <p>結果↓</p>
+                 <p id="res">1 <br>
+                             3.14 <br>
+                             6j (←6iの意)</p>
+               </section>
+              </section>
+          </li><br>
+          <li><section class="S2" id="s2-3">
+               <h2>２進数、８進数、１６進数</h2>
+               <section>
+                 <p class="exp">整数リテラルには他にも表記方法が存在する。それが２、８、６進数による表記法である。 <br>
+                    Pythonでこれらの数値を表すとき、数値の先頭に以下のように表記を付ける必要がある。</p>
+                 <ul>
+                   <li>２進数(0~1):<strong>0b</strong>+数字</li>
+                   <li>８進数(0~7):<strong>0o</strong>+数字</li>
+                   <li>16進数(0~9、A~F):<strong>0x</strong>+数字</li>
+                 </ul>
+                 <p id="eg1">print(&quot10進数の10は&quot,10,&quotである。&quot) <br>
+                             print(&quot2進数の10は&quot,0b10,&quotである。&quot) <br>
+                             print(&quot8進数の10は&quot,0o10,&quotである。&quot) <br>
+                             print(&quot16進数の10は&quot,0x10,&quotである。&quot) <br>
+                             print(&quot16進数のFは&quot,0xF,&quotである。&quot) <br></p>
+                 <p>結果↓</p>
+                 <p id="res">10進数の10は 10 である。 <br>
+                             2進数の10は 2 である。 <br>
+                             8進数の10は 8 である。 <br>
+                             16進数の10は 16 である。 <br>
+                             16進数のFは 15 である。</p>
+               </section>
+              </section>
+          </li><br>
+          <li><section class="S2" id="s2-4">
+               <h2>エスケープシークエンス</h2>
+               <section>
+                 <p class="exp">文字の中には１文字で表すことのできない特殊な文字がある。Pythonでこれらの文字を表すとき、<strong>「&yen」</strong>を最初につけた文字の組み合わせで表記する。 <br>
+                    (<span id="sp">エスケープシークエンス/escape sequence</span>と呼ぶ。)</p>
+                 <table border="1">
+                   <thead>
+                     <tr>
+                       <th>エスケープシークエンス</th>
+                       <th>意味している文字</th>
+                     </tr>
+                   </thead>
+                   <tbody>
+                     <tr>
+                       <td>&yent</td>
+                       <td>水平タブ</td>
+                     </tr>
+                     <tr>
+                       <td>&yenv</td>
+                       <td>垂直タブ</td>
+                     </tr>
+                     <tr>
+                       <td>&yenn</td>
+                       <td>改行</td>
+                     </tr>
+                     <tr>
+                       <td>&yenr</td>
+                       <td>復帰</td>
+                     </tr>
+                     <tr>
+                       <td>&yena</td>
+                       <td>警告音</td>
+                     </tr>
+                     <tr>
+                       <td>&yenb</td>
+                       <td>バックスペース</td>
+                     </tr>
+                     <tr>
+                       <td>&yenf</td>
+                       <td>改ページ</td>
+                     </tr>
+                     <tr>
+                       <td>&yen'</td>
+                       <td>'</td>
+                     </tr>
+                     <tr>
+                       <td>&yen&quot</td>
+                       <td>&quot</td>
+                     </tr>
+                     <tr>
+                       <td>&yen&yen</td>
+                       <td>&yen</td>
+                     </tr>
+                     <tr>
+                       <td>&yen+o(８進数)</td>
+                       <td>８進数の文字コードを持つ文字</td>
+                     </tr>
+                     <tr>
+                       <td>&yen+x(１６進数)</td>
+                       <td>１６進数の文字コードを持つ文字</td>
+                     </tr>
+                   </tbody>
+                 </table>
+                 <p id="eg1">print(&quot円記号を表示します。:\\&quot)<br>
+                             print(&quotアポストロフィを表示します。:\'&quot)</p>
+                 <p>結果↓</p>
+                 <p id="res">円記号を表示します。:\<br>
+                             アポストロフィを表示します。:'</p>
+               </section>
+              </section>
+              <p class="exp">なお、文字列の前に<strong>「r」</strong>または<strong>「R」</strong>をつけることで、「\」をエスケープシークエンスとして扱わない文字列を作成できる。 <br>
+                             (<strong>raw文字列</strong>と呼ぶ。)</p>
+              <p id="eg1">print(r&quot円記号を表示します。(raw文字列):\\&quot)</p>
+              <p>結果↓</p>
+              <p id="res">円記号を表示します。(raw文字列):\\</p>
+          </li><br>
+        </ol>
+      </div><br>
+
+      <div class="section3" id="s3">
+        <h1>変数と式</h1>
+        <p></p>
+        <ol>
+
+        </ol>
+      </div>
+    </main>
+
+  </body>
+</html>
